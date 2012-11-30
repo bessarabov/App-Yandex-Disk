@@ -1,10 +1,7 @@
-#!perl -T
+#!perl
 
 use Test::More tests => 1;
 
-BEGIN {
-    use_ok( 'App::Yandex::Disk' ) || print "Bail out!
-";
-}
+use App::Yandex::Disk;
 
-diag( "Testing App::Yandex::Disk $App::Yandex::Disk::VERSION, Perl $], $^X" );
+ok(1, "App::Yandex::Disk version $App::Yandex::Disk::VERSION, Perl $] loaded ok");

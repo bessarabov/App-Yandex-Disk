@@ -7,10 +7,9 @@ WriteMakefile(
     AUTHOR              => q{Ivan Bessarabov <ivan@bessarabov.ru>},
     VERSION_FROM        => 'lib/App/Yandex/Disk.pm',
     ABSTRACT_FROM       => 'lib/App/Yandex/Disk.pm',
-    ($ExtUtils::MakeMaker::VERSION >= 6.3002
-      ? ('LICENSE'=> 'perl')
-      : ()),
+    LICENSE             => 'perl',
     PL_FILES            => {},
+    EXE_FILES           => [ grep { /\w$/ } glob("bin/*") ],
     PREREQ_PM => {
         'Test::More' => 0,
     },
